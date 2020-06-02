@@ -1,55 +1,46 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
+  <v-app id="gc-element">
     <v-content>
-      <HelloWorld />
-
-      <v-btn depressed color="primary">Klick den Button!</v-btn>
+      <v-container>
+        <v-card elevation="0" style="background-color: #111;">
+          <div class="pa-6">
+            <v-row>
+              <v-col cols="12" md="6" class="text-center">
+                <v-img
+                  style="max-width:250px"
+                  class="mx-auto"
+                  src="https://images.prismic.io/jonathan-wilke/6dde37c3-42c7-4a5d-9aa9-49b6862ee9c4_work-finally-friday-logo.png?auto=compress,format&amp;w=300&amp;auto=compress"
+                  alt="Finally Friday"
+                  loading="lazy"
+                />
+                <div
+                  class="mt-8 primary--text font-weight-bold text-uppercase tag-list"
+                >
+                  <span class="d-inline-block">#Design</span>
+                  <span class="d-inline-block pl-3">#Wordpress</span>
+                </div>
+                <v-btn depressed rounded color="primary" class="mt-6" large
+                  >Seite ansehen</v-btn
+                >
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-img
+                  class="max-w-full"
+                  src="https://images.prismic.io/jonathan-wilke/6812cb85-387d-4140-ab17-c09518d6eb27_work-finally-friday.png?auto=compress,format&amp;w=800&amp;auto=compress"
+                  alt="Finally Friday"
+                  loading="lazy"
+                />
+              </v-col>
+            </v-row>
+          </div> </v-card
+      ></v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App",
-
-  components: {
-    HelloWorld
-  },
 
   data: () => ({
     //
